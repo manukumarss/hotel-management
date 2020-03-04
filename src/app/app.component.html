@@ -7,6 +7,9 @@
         <li>
             <a [routerLink]="['signup']" >SignUp</a>
         </li>
+        <li>
+            <a [routerLink]="['signin']" >SignIn</a>
+        </li>
         <li *ngIf="isLoggedIn">
             <a [routerLink]="['user-list']" >Users list</a>
         </li>
