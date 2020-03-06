@@ -24,9 +24,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/styles.css"              
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -123,6 +127,6 @@
   },
   "defaultProject": "hotel-management",
   "cli": {
-    "analytics": "7ac8a116-db90-4922-8942-4be2f0705aa6"
+    "analytics": "2b1f8b53-c910-49f8-96f6-70e0b466842e"
   }
 }

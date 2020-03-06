@@ -1,3 +1,93 @@
-<ul>
-    <li *ngFor="let user of users"> {{ user | json }}</li>
-</ul>
+
+<style>
+    .table{
+        padding-top: 90px;
+    }
+
+    table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+image {
+  align-content: center;
+}
+
+th {
+  height: 50px;
+}
+      </style>
+
+<header id="header" class="fixed-top header-transparent">
+        <div class="container">
+    
+            <div class="logo float-left">
+            <h1 class="text-light"><a href="index.html"><span>Hotel Managment</span></a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+    
+            <nav class="nav-menu float-right d-none d-lg-block">
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a a href="user-list">About Us</a></li>
+                <li><a a href="sign-up" >SignUp</a></li>
+                <li><a a href="login" >SignIn</a></li>
+                
+                <li class="drop-down"><a href="">Drop Down</a>
+                <ul>
+                    <li><a href="#">Drop Down 1</a></li>
+                    <li><a href="#">Drop Down 2</a></li>
+                    <li><a href="#">Drop Down 3</a></li>
+                </ul>
+                </li>
+            </ul>
+            </nav><!-- .nav-menu -->
+    
+        </div>
+    </header><!-- End Header -->
+    <div class="table">
+            <div class="image"></div>
+            <img src="../../assets/img/superior_01-21.jpg" alt="" /><br /><br /><br />
+                The rooms in Ca' Pisani hotel have been realised completely using original pieces of design and are taken care of down to the last detail.
+                Refined style, play of colours and precious materials make the hotel a real jewel of contemporary design. The presence of marbles, precious fabrics and inlaid wood furniture has been designed to guarantee guests maximum comfort and relaxation.
+                Elegant and refined, some rooms overlook the side of the Gallerie dell'Accademia, or have a partial view of Giudecca Canal.
+                All rooms are treated with taste and refinement: the Deco furnishings typical of the 1930s and 1940s, fine Bevilacqua fabrics (created to designs of delicate beauty) and doors with geometric patterns each different from the other (and executed with extraordinary cabinet-making work) are just some examples that make Ca 'Pisani a unique place of its kind.
+                The marble finishes, the high ceilings of the rooms on the first floor, the original beds of the 1930s and 1940s (embellished with silver headboards), the bamboo floors, the exposed beams of the rooms on the top floor, the stairs in wood and glass and the door handles designed ad hoc are all meticulously studied elements, they are the result of a precious work of craftsmanship.
+                Some rooms can accommodate three people and we have both cradles and cots for small children. In addition, two rooms are available for guests with disabilities, both on the first floor.
+                All rooms are equipped with free Wi-Fi, telephone, flat-screen TV, air conditioning, heating with electric blinds and double-glazed windows.
+                The bathrooms are embellished with starlight marble decorations, bathtub/shower, hair dryer, heated towel rail and exclusive complimentary toiletries.
+        </div>
+<!-- <div class="table">
+        <table>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>USERNAME</th>
+        <th>ROLE</th>
+        <th>MOBILE</th>
+    </tr>   
+    <tr *ngFor="let user of users">
+        <td>{{user['id']}}</td>
+        <td>{{user['userFirstName']+user['userLastName']}}</td>
+        <td>{{user['userName']}}</td>
+        <td>{{user['roleType']}}</td>
+        <td>{{user['phoneNumber']}}</td>
+    </tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr>
+        <td>sumne</td>
+    </tr>
+</table>
+</div> -->

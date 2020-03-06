@@ -1,0 +1,56 @@
+<header id="header" class="fixed-top header-transparent">
+    <div class="container">
+
+        <div class="logo float-left">
+        <h1 class="text-light"><a href="index.html"><span>Hotel Managment</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+
+        <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a a href="user-list">About Us</a></li>
+            <li><a a href="sign-up" >SignUp</a></li>
+            <li><a a href="login" >SignIn</a></li>
+            
+            <li class="drop-down"><a href="">Drop Down</a>
+            <ul>
+                <li><a href="#">Drop Down 1</a></li>
+                <li><a href="#">Drop Down 2</a></li>
+                <li><a href="#">Drop Down 3</a></li>
+            </ul>
+            </li>
+        </ul>
+        </nav><!-- .nav-menu -->
+
+    </div>
+</header><!-- End Header -->
+
+<main id="main">
+
+<div class="login">
+  <h2 class="login-header">Log in</h2>
+  <form [formGroup]="loginForm" class="login-container" (ngSubmit)="onSubmit()">
+
+    <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
+      <input type="email" placeholder="Email" formControlName="userName">
+    </p>
+
+    <div *ngIf="isSubmitted && formControls.email.errors" class="help-block">
+      <div *ngIf="formControls.email.errors.required">email is required</div>
+    </div>
+
+    <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
+      <input type="password" placeholder="Password" formControlName="password">
+    </p>
+
+    <div *ngIf="isSubmitted && formControls.password.errors" class="help-block">
+      <div *ngIf="formControls.password.errors.required">Password is required</div>
+    </div>
+
+    <p><input type="submit" value="Log in"> </p>
+    
+  </form>
+</div>
+</main>

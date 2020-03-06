@@ -1,19 +1,55 @@
-<div>
-    <form [formGroup]="user" (ngSubmit)="onSubmit()">
-        <label>
-            User Name:
-            <input type="text" formControlName="username">
-          </label>
-        <label>
-            First Name:
-            <input type="text" formControlName="firstName">
-          </label>
-        
-          <label>
-            Last Name:
-            <input type="text" formControlName="lastName">
-          </label>
-          <button type="submit" [disabled]="!user.valid"> Sign Up</button>
-    </form>
-</div>
+<header id="header" class="fixed-top header-transparent">
+        <div class="container">
+    
+            <div class="logo float-left">
+            <h1 class="text-light"><a href="index.html"><span>Hotel Managment</span></a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+    
+            <nav class="nav-menu float-right d-none d-lg-block">
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a a href="user-list">About Us</a></li>
+                <li><a a href="sign-up" >SignUp</a></li>
+                <li><a a href="login" >SignIn</a></li>
+                
+                <li class="drop-down"><a href="">Drop Down</a>
+                <ul>
+                    <li><a href="#">Drop Down 1</a></li>
+                    <li><a href="#">Drop Down 2</a></li>
+                    <li><a href="#">Drop Down 3</a></li>
+                </ul>
+                </li>
+            </ul>
+            </nav><!-- .nav-menu -->
+    
+        </div>
+    </header><!-- End Header -->
 
+    <main id="main">
+
+<div class ='signup'>
+    <h2 class="signup-header">Sign Up</h2>
+    
+    <form [formGroup]="user" (ngSubmit)="onSubmit()" id='formid' class='signup-container'>
+        <div class="container ">
+
+            <input class="inputContainer" type="text" placeholder="First Name" formControlName="userFirstName">
+            
+            <input class="inputContainer" type="text" placeholder="Last Name" formControlName="userLastName">
+  
+         <!--    <label>Password: <input type="password" formControlName="password"></label> -->
+  
+            <input class="inputContainer" type="text" placeholder="Email id"  formControlName="userEmail">
+  
+            <input class="inputContainer" type="text" placeholder="Mobile No"  formControlName="phoneNumber">
+            
+            <input type="submit" value="Sign up">
+  
+        </div>  
+            
+    </form>
+    
+  </div>
+    </main>
