@@ -1,0 +1,86 @@
+
+<style>
+    .table{
+        padding-top: 90px;
+    }
+
+    table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+image {
+  align-content: center;
+}
+
+th {
+  height: 50px;
+}
+      </style>
+<header id="header" class="fixed-top header-transparent">
+    <div class="container">
+  
+        <div class="logo float-left">
+        <h1 class="text-light"><a href="index.html"><span>Hotel Managment</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+  
+        <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+            <!-- <li class="active"><a href="index.html">Home</a></li>
+            <li><a a href="user-list">About Us</a></li>
+            <li><a a href="sign-up" >SignUp</a></li>
+            <li><a a href="login" >SignIn</a></li> -->
+            
+            <li class="drop-down"><a>Owner</a>
+            <ul>
+                <li><a href="change-password">Change Password</a></li>
+                <li><a href="#">SignOut</a></li>
+            </ul>
+            </li>
+        </ul>
+        </nav><!-- .nav-menu -->
+  
+    </div>
+  </header><!-- End Header -->
+
+ 
+<!-- ======= Services Section ======= -->
+<!-- <section class="userservices">
+    <div class="row">
+            <div class="col-3">
+            <input class="inputContainer" type="text" placeholder="Start Date"  formControlName="start">
+            </div>
+            <div class="col-3">
+            <input class="inputContainer" type="text" placeholder="End Date"  formControlName="end">
+            </div>
+            <div class="col-6">
+            </div>
+        </div>
+
+</section> -->
+    
+        
+<div class="table">
+        <table>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>USERNAME</th>
+            <th>ROLE</th>
+            <th>MOBILE</th>
+        </tr>   
+        <tr *ngFor="let user of users">
+            <td>{{user['id']}}</td>
+            <td>{{user['userFirstName']+user['userLastName']}}</td>
+            <td>{{user['userName']}}</td>
+            <td>{{user['roleType']}}</td>
+            <td>{{user['phoneNumber']}}</td>
+        </tr>
+    </table>
+    </div>

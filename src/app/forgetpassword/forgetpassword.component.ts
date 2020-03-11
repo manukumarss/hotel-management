@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from  '@angular/forms';
-import { Router } from  '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-forgetpassword',
@@ -13,16 +13,16 @@ export class ForgetpasswordComponent implements OnInit {
 
   loginForm: FormGroup;
   isSubmitted  =  false;
-  
+
   get formControls() { return this.loginForm.controls; }
 
-  forgotpassword(){
+  forgotpassword() {
     console.log(this.loginForm.value);
     this.isSubmitted = true;
-    if(this.loginForm.invalid){
+    if (this.loginForm.invalid) {
       return;
     }
-    //this.authService.login(this.loginForm.value);
+    // this.authService.login(this.loginForm.value);
     this.router.navigateByUrl('/user-list');
   }
 

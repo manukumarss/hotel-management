@@ -558,8 +558,8 @@
                     var type;
                     switch (event.type) {
                         case "mousedown": type = TouchMouseEvent.DOWN; break;
-                        case "mouseup":   type = TouchMouseEvent.UP;   break;
-                        case "mouseout":   type = TouchMouseEvent.UP;   break;
+                        case "mouseup": type = TouchMouseEvent.UP;   break;
+                        case "mouseout": type = TouchMouseEvent.UP;   break;
                         case "mousemove": type = TouchMouseEvent.MOVE; break;
                         default:
                             return;
@@ -572,8 +572,8 @@
                     var type;
                     switch (event.type) {
                         case "touchstart": type = TouchMouseEvent.DOWN; break;
-                        case "touchend":   type = TouchMouseEvent.UP;   break;
-                        case "touchmove":  type = TouchMouseEvent.MOVE; break;
+                        case "touchend": type = TouchMouseEvent.UP;   break;
+                        case "touchmove": type = TouchMouseEvent.MOVE; break;
                         default:
                             return;
                     }

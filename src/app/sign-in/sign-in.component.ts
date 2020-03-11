@@ -10,7 +10,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class SignInComponent implements OnInit {
 
-  constructor(private userService: UserService, private router: Router){ }
+  constructor(private userService: UserService, private router: Router) { }
 
   user = new FormGroup({
     username: new FormControl(''),

@@ -12,28 +12,28 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  createUser(user: any){
+  createUser(user: any) {
     return this.http.post('/api/users/createNewUser', user);
   }
 
-  getAllUsers(){
+  getAllUsers() {
     return this.http.get('/api/users/getAllUsersDetails');
   }
 
-  changepassword(user: any){
+  changepassword(user: any) {
     return this.http.post('/api/users/changePassword', user);
   }
 
-  isLoggedInUser(user: any){
+  isLoggedInUser(user: any) {
     return this.http.post('/api/users/login', user);
   }
 
 
-  isUserLoggedIn(){
+  isUserLoggedIn() {
     return this.isLoggedIn;
   }
 
-  updateLogInStatus(status: boolean){
+  updateLogInStatus(status: boolean) {
     this.isLoggedIn.next(status);
   }
 }

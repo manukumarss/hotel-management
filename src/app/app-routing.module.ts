@@ -8,6 +8,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { OwnerDashboardComponent } from './owner-dashboard/owner-dashboard.component';
 
 
 /* const routes: Routes = [
@@ -26,24 +28,32 @@ const routes: Routes = [
     component: SignUpComponent
   },
   {
-    path:'login',
+    path: 'login',
     component: LoginComponent
   },
   {
-    path:'user-list',
+    path: 'user-list',
     component: UserListComponent
   },
   {
-    path:'forgetpassword',
+    path: 'forgetpassword',
     component: ForgetpasswordComponent
   },
   {
-    path:'change-password',
+    path: 'change-password',
     component: ChangePasswordComponent
   },
   {
-    path:'**',
-    redirectTo:'signup'
+    path: 'user-dashboard',
+    component: UserDashboardComponent
+  },
+  {
+    path: 'owner-dashboard',
+    component: OwnerDashboardComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'signup'
   }
 ];
 

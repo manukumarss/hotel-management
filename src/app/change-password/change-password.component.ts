@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {  FormGroup, FormControl } from  '@angular/forms';
+import {  FormGroup, FormControl } from '@angular/forms';
 import { Router} from '@angular/router';
 
 import { UserService } from '../services/user.service';
@@ -25,27 +25,21 @@ get formControls() { return this.changepasswordForm.controls; }
 
 
 ngOnInit() {
- /*  this.changepasswordForm  =  this.formBuilder.group({
-    currentpassword: ['', Validators.required],
-    newpassword: ['', Validators.required],
-    confirmpassword: ['', Validators.required]
-}); */
+
 }
 
-onSubmit(){
+onSubmit() {
   console.log(this.changepasswordForm.value);
   this.userService.changepassword(this.changepasswordForm.value).subscribe(response => {
-    console.log(response)
-    if(response){
-    this.isSubmitted = true;
-    if(this.changepasswordForm.invalid){
-      return;
+    if (response) {
+      this.isSubmitted = true;
+      if (this.changepasswordForm.invalid) {
+        return;
+      }
     }
-  }
-    
+
     this.router.navigate(['login']);
-    //this.authService.changepassword(this.changepasswordForm.value);
-    //this.router.navigateByUrl('/changepassword');
-});
-  }
+
+  });
+}
 }

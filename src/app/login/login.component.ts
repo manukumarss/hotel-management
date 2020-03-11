@@ -1,5 +1,5 @@
-import { FormBuilder, FormGroup, FormControl } from  '@angular/forms';
-import { Router } from  '@angular/router';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
 
@@ -11,9 +11,8 @@ import { UserService } from '../services/user.service';
 
 export class LoginComponent implements OnInit {
 
-  constructor(private userService: UserService,private router: Router, private formBuilder: FormBuilder ) { }
+  constructor(private userService: UserService, private router: Router, private formBuilder: FormBuilder ) { }
 
- 
   loginForm = new FormGroup({
     userName: new FormControl(''),
     password: new FormControl('')
@@ -22,26 +21,25 @@ export class LoginComponent implements OnInit {
   isSubmitted  =  false;
 
   get formControls() { return this.loginForm.controls; }
- 
-
-  ngOnInit() {
-    /* this.loginForm  =  this.formBuilder.group({
-      email: ['', Validators.required],
-      password: ['', Validators.required]
-    }); */
-  }
 
 
+ngOnInit() {}
 
-  onSubmit(){
+  onSubmit() {
     this.isSubmitted = true;
     console.log(this.loginForm.value);
     this.userService.isLoggedInUser(this.loginForm.value).subscribe(response => {
-      console.log(response)
-      if(response){
-        this.router.navigate(['user-list']);
+      console.log(response);
+      if (response) {
+        const key = 'roleType';
+        if (response[key] === 'user') {
+          this.router.navigate(['user-dashboard']);
+        } else if (response[key] === 'owner') {
+          this.router.navigate(['owner-dashboard']);
+        } else {
+          this.router.navigate(['']);
+        }
       }
-     // this.router.navigate(['user-list']);
     });
   }
 }

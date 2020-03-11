@@ -21,29 +21,17 @@ export class SignUpComponent implements OnInit {
     userFirstName: new FormControl(''),
     userLastName: new FormControl(''),
     userEmail: new FormControl(''),
-  /*   password: new FormControl(''),
-    confirmpassword: new FormControl(''), */
     phoneNumber: new FormControl('')
   });
 
-  
+  ngOnInit() {}
 
-  ngOnInit() {
-    /* this.signupform  =  this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      emailid: ['', Validators.required],
-      password: ['', Validators.required],
-      confirmpassword: ['', Validators.required],
-      contactno: ['', Validators.required]
-}); */
-}
-
-  onSubmit(){
+  onSubmit() {
     console.log(this.user.value);
+    const password = 'password';
     this.userService.createUser(this.user.value).subscribe(response => {
-      alert("Use this OTP as a existing password "+response['password'])
-      if(response){
+      alert('Use this OTP as a existing password ' + response[password]);
+      if (response) {
         this.userService.updateLogInStatus(true);
         this.router.navigate(['change-password']);
       }

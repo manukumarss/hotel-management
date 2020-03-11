@@ -18,8 +18,8 @@ export class UserListComponent implements OnInit {
     this.loadUsers();
   }
 
-  loadUsers(){
-    this.userService.getAllUsers().subscribe((users:any[]) => {
+  loadUsers() {
+    this.userService.getAllUsers().subscribe((users: any[]) => {
       this.users = users;
     });
   }
